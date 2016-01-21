@@ -11,31 +11,24 @@
 @implementation DieLabel
 
 
--(instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
+-(instancetype)initWithCoder:(NSCoder *)coder{
+    self = [super initWithCoder:coder];
     
     if (self) {
-        self.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapHandler)];
-        self.gestureRecognizers = @[tapGestureRecognizer];
-        
-        for (UITapGestureRecognizer *recognizer in self.gestureRecognizers) {
-            recognizer.delegate = self;
-        }
+       // self.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dieLabelTapped)];
+        tapGestureRecognizer.numberOfTapsRequired = 1;
+        [self addGestureRecognizer:tapGestureRecognizer];
+
     }
     return  self;
 }
 
 
 
--(void)tapHandler:(UITapGestureRecognizer *)gestureRecognizer {
-    CGPoint point = [gestureRecognizer locationInView:gestureRecognizer.view];
+-(void)dieLabelTapped {
+    [self.delegate dieWasTapped:self];
 
-    if (CGRectContainsPoint(self.frame, point)) {
-        [gestureRecognizer.view setTransform:CGAffineTransformTranslate(gestureRecognizer.view.transform, point.x, point.y)];
-        
-        
-    }
 }
 
 @end

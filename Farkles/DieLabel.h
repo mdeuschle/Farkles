@@ -8,14 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol DieLabel <NSObject>
+//@protocol DieLabelDelegate <NSObject>
+//
+//-(void)dieWasTapped:(DieLabel *)dieLabel;
+//
+//
+//@end
+//
+//@interface DieLabel : UILabel
+//
+//@property (nonatomic, assign) id <DieLabelDelegate> delegate;
+//
+//@end
+@protocol DieLabelDelegate;
 
+@interface DieLabel:UILabel
+
+@property (weak, nonatomic) IBOutlet id <DieLabelDelegate> delegate;
 
 
 @end
 
-@interface DieLabel : UILabel
+@protocol DieLabelDelegate <NSObject>
 
+-(void)dieWasTapped:(DieLabel *)dieLabel;
 
 
 @end
