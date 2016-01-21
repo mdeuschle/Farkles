@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CC054751C51747D007ECB7B /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC054741C51747D007ECB7B /* DieLabel.m */; };
 		A80452F11C5172A800B59865 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452F01C5172A800B59865 /* main.m */; };
 		A80452F41C5172A800B59865 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452F31C5172A800B59865 /* AppDelegate.m */; };
 		A80452F71C5172A800B59865 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452F61C5172A800B59865 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CC054731C51747D007ECB7B /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		4CC054741C51747D007ECB7B /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
 		A80452EC1C5172A800B59865 /* Farkles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farkles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80452F01C5172A800B59865 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A80452F21C5172A800B59865 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				A80452F51C5172A800B59865 /* ViewController.h */,
 				A80452F61C5172A800B59865 /* ViewController.m */,
 				A80452F81C5172A800B59865 /* Main.storyboard */,
+				4CC054731C51747D007ECB7B /* DieLabel.h */,
+				4CC054741C51747D007ECB7B /* DieLabel.m */,
 				A80452FB1C5172A800B59865 /* Assets.xcassets */,
 				A80452FD1C5172A800B59865 /* LaunchScreen.storyboard */,
 				A80453001C5172A800B59865 /* Info.plist */,
@@ -153,6 +158,7 @@
 				A80452F71C5172A800B59865 /* ViewController.m in Sources */,
 				A80452F41C5172A800B59865 /* AppDelegate.m in Sources */,
 				A80452F11C5172A800B59865 /* main.m in Sources */,
+				4CC054751C51747D007ECB7B /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +307,7 @@
 				A80453051C5172A800B59865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
