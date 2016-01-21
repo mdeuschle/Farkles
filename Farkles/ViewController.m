@@ -17,7 +17,8 @@
 @property (weak, nonatomic) IBOutlet DieLabel *dieFiveLabel;
 @property (weak, nonatomic) IBOutlet DieLabel *dieSixLabel;
 
-
+@property (strong, nonatomic) IBOutlet DieLabel *userScore;
+@property (strong, nonatomic) IBOutlet DieLabel *userTwoScore;
 
 @end
 
@@ -37,10 +38,15 @@
 }
 
 -(void)dieWasTapped:(DieLabel *)dieLabel {
-    
 
     [self.dieOneLabel setBackgroundColor:[UIColor greenColor]];
+}
 
+- (IBAction)onRollPressed:(UIButton *)sender {
+}
+- (IBAction)onImDonePointMeTapped:(UIButton *)sender {
+}
+- (IBAction)onTurnOverTapped:(UIButton *)sender {
 }
 
 @end
