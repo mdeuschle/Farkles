@@ -8,9 +8,16 @@
 
 #import "ViewController.h"
 
-@interface ViewController () //<UIGestureRecognizerDelegate>
+@interface ViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet DieLabel *dieOneLabel;
+@property (weak, nonatomic) IBOutlet DieLabel *dieTwoLabel;
+@property (weak, nonatomic) IBOutlet DieLabel *dieThreeLabel;
+@property (weak, nonatomic) IBOutlet DieLabel *dieFourLabel;
+@property (weak, nonatomic) IBOutlet DieLabel *dieFiveLabel;
+@property (weak, nonatomic) IBOutlet DieLabel *dieSixLabel;
+
+
 
 @end
 
