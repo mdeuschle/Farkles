@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "DieLabel.h"
 
-@interface ViewController () <UIGestureRecognizerDelegate>
+@interface ViewController () <UIGestureRecognizerDelegate, DieLabelDelegate>
 
 @property (weak, nonatomic) IBOutlet DieLabel *dieOneLabel;
 @property (weak, nonatomic) IBOutlet DieLabel *dieTwoLabel;
@@ -20,33 +21,44 @@
 @property (strong, nonatomic) IBOutlet DieLabel *userScore;
 @property (strong, nonatomic) IBOutlet DieLabel *userTwoScore;
 
+@property NSArray *diceLabelsArray;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setDieOneLabel:self.dieOneLabel];
 
-
-    //self.dieOneLabel.layer.cornerRadius = 10;
-    //self.dieOneLabel.clipsToBounds = YES;
-    //[self.dieOneLabel setBackgroundColor:[UIColor greenColor]];
-
-    
+    self.diceLabelsArray = [NSArray arrayWithObjects:
+                            self.dieOneLabel,
+                            self.dieTwoLabel,
+                            self.dieThreeLabel,
+                            self.dieFourLabel,
+                            self.dieFiveLabel,
+                            self.dieSixLabel,
+                            nil];
 }
 
--(void)dieWasTapped:(DieLabel *)dieLabel {
-
-    [self.dieOneLabel setBackgroundColor:[UIColor greenColor]];
+-(void)dieWasTapped:(DieLabel *)dieLabel
+{
+        dieLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green1"]];
 }
 
-- (IBAction)onRollPressed:(UIButton *)sender {
+- (IBAction)onRollPressed:(UIButton *)sender
+{
+    for (DieLabel *dieLabel in self.diceLabelsArray)
+    {
+        [dieLabel roll:sender];
+    }
 }
+
 - (IBAction)onImDonePointMeTapped:(UIButton *)sender {
+
 }
 - (IBAction)onTurnOverTapped:(UIButton *)sender {
+
 }
+
 
 @end

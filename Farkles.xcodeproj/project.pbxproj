@@ -61,13 +61,13 @@
 		A80452EE1C5172A800B59865 /* Farkles */ = {
 			isa = PBXGroup;
 			children = (
-				A80452F81C5172A800B59865 /* Main.storyboard */,
 				A80452F21C5172A800B59865 /* AppDelegate.h */,
 				A80452F31C5172A800B59865 /* AppDelegate.m */,
 				A80452F51C5172A800B59865 /* ViewController.h */,
 				A80452F61C5172A800B59865 /* ViewController.m */,
 				4CC054731C51747D007ECB7B /* DieLabel.h */,
 				4CC054741C51747D007ECB7B /* DieLabel.m */,
+				A80452F81C5172A800B59865 /* Main.storyboard */,
 				A80452FB1C5172A800B59865 /* Assets.xcassets */,
 				A80452FD1C5172A800B59865 /* LaunchScreen.storyboard */,
 				A80453001C5172A800B59865 /* Info.plist */,

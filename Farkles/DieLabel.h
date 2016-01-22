@@ -8,18 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol DieLabelDelegate;
+// define protocol
+@protocol DieLabelDelegate <NSObject>
 
-@interface DieLabel:UILabel
-
-@property (weak, nonatomic) IBOutlet id <DieLabelDelegate> delegate;
-
+// declare method in our protocol
+-(void)dieWasTapped:(UILabel *)dieLabel;
 
 @end
 
-@protocol DieLabelDelegate <NSObject>
+@interface DieLabel : UILabel
 
--(void)dieWasTapped:(DieLabel *)dieLabel;
+@property NSTimer *randomTimer;
+@property int randomInt;
+@property int randomDice;
 
+// declare property that specifies protocol
+@property (weak, nonatomic) id <DieLabelDelegate> delegate;
+
+-(void)roll:(id)sender;
 
 @end
