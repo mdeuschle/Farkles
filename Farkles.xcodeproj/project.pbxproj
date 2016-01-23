@@ -14,6 +14,7 @@
 		A80452FA1C5172A800B59865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80452F81C5172A800B59865 /* Main.storyboard */; };
 		A80452FC1C5172A800B59865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80452FB1C5172A800B59865 /* Assets.xcassets */; };
 		A80452FF1C5172A800B59865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80452FD1C5172A800B59865 /* LaunchScreen.storyboard */; };
+		A80454381C54275900B59865 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = A80454371C54275900B59865 /* Dice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		A80452FB1C5172A800B59865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A80452FE1C5172A800B59865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A80453001C5172A800B59865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A80454361C54275900B59865 /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
+		A80454371C54275900B59865 /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				A80452F61C5172A800B59865 /* ViewController.m */,
 				4CC054731C51747D007ECB7B /* DieLabel.h */,
 				4CC054741C51747D007ECB7B /* DieLabel.m */,
+				A80454361C54275900B59865 /* Dice.h */,
+				A80454371C54275900B59865 /* Dice.m */,
 				A80452F81C5172A800B59865 /* Main.storyboard */,
 				A80452FB1C5172A800B59865 /* Assets.xcassets */,
 				A80452FD1C5172A800B59865 /* LaunchScreen.storyboard */,
@@ -155,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80454381C54275900B59865 /* Dice.m in Sources */,
 				A80452F71C5172A800B59865 /* ViewController.m in Sources */,
 				A80452F41C5172A800B59865 /* AppDelegate.m in Sources */,
 				A80452F11C5172A800B59865 /* main.m in Sources */,

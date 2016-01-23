@@ -7,6 +7,7 @@
 //
 
 #import "DieLabel.h"
+#import "Dice.h"
 
 @implementation DieLabel
 
@@ -28,9 +29,12 @@
 
 -(void)roll:(id)sender
 {
-    self.randomInt = 10;
+    self.blueDiceArray = [NSArray arrayWithObjects:
+                          [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue1"]],[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue2"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue3"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue4"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue5"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue6"]], nil];
 
-    self.randomTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+    self.randomInt = 15;
+    
+    self.randomTimer = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
 }
 
 -(void)timerUpdate;

@@ -21,6 +21,8 @@
 @property NSTimer *randomTimer;
 @property int randomInt;
 @property int randomDice;
+@property NSArray *blueDiceArray;
+@property NSArray *greenDiceArray;
 
 // declare property that specifies protocol
 @property (weak, nonatomic) id <DieLabelDelegate> delegate;

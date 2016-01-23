@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DieLabel.h"
+#import "Dice.h"
 
 @interface ViewController () <UIGestureRecognizerDelegate, DieLabelDelegate>
 
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet DieLabel *userTwoScore;
 
 @property NSArray *diceLabelsArray;
+@property NSArray *diceArray;
 
 @end
 
@@ -29,6 +31,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    Dice *die1 = [[Dice alloc]initWithFullLabels:1
+                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green1"]]
+                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue1"]]];
+
+    Dice *die2 = [[Dice alloc]initWithFullLabels:1
+                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green2"]]
+                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue2"]]];
+
+    Dice *die3 = [[Dice alloc]initWithFullLabels:1
+                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green3"]]
+                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue3"]]];
+
+    Dice *die4 = [[Dice alloc]initWithFullLabels:1
+                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green4"]]
+                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue4"]]];
+
+    Dice *die5 = [[Dice alloc]initWithFullLabels:1
+                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green5"]]
+                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue5"]]];
+
+    Dice *die6 = [[Dice alloc]initWithFullLabels:1
+                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green6"]]
+                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue6"]]];
+
+    self.diceArray = [NSArray arrayWithObjects:die1, die2, die3, die4, die5, die6, nil];
+
 
     self.diceLabelsArray = [NSArray arrayWithObjects:
                             self.dieOneLabel,
@@ -38,6 +67,7 @@
                             self.dieFiveLabel,
                             self.dieSixLabel,
                             nil];
+
 }
 
 -(void)dieWasTapped:(DieLabel *)dieLabel
