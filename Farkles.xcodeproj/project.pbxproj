@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4CC054751C51747D007ECB7B /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC054741C51747D007ECB7B /* DieLabel.m */; };
+		4CE20C3E1C5545C200F759BF /* Players.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE20C3D1C5545C200F759BF /* Players.m */; };
+		4CE20C411C55467400F759BF /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE20C401C55467400F759BF /* GameLogic.m */; };
 		A80452F11C5172A800B59865 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452F01C5172A800B59865 /* main.m */; };
 		A80452F41C5172A800B59865 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452F31C5172A800B59865 /* AppDelegate.m */; };
 		A80452F71C5172A800B59865 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452F61C5172A800B59865 /* ViewController.m */; };
@@ -20,6 +22,10 @@
 /* Begin PBXFileReference section */
 		4CC054731C51747D007ECB7B /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
 		4CC054741C51747D007ECB7B /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
+		4CE20C3C1C5545C200F759BF /* Players.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Players.h; path = ../Players.h; sourceTree = "<group>"; };
+		4CE20C3D1C5545C200F759BF /* Players.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Players.m; path = ../Players.m; sourceTree = "<group>"; };
+		4CE20C3F1C55467400F759BF /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLogic.h; path = ../GameLogic.h; sourceTree = "<group>"; };
+		4CE20C401C55467400F759BF /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLogic.m; path = ../GameLogic.m; sourceTree = "<group>"; };
 		A80452EC1C5172A800B59865 /* Farkles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farkles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80452F01C5172A800B59865 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A80452F21C5172A800B59865 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,6 +51,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CE20C331C55436D00F759BF /* View Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				A80452F51C5172A800B59865 /* ViewController.h */,
+				A80452F61C5172A800B59865 /* ViewController.m */,
+			);
+			name = "View Contollers";
+			sourceTree = "<group>";
+		};
+		4CE20C341C55438D00F759BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CE20C3F1C55467400F759BF /* GameLogic.h */,
+				4CE20C401C55467400F759BF /* GameLogic.m */,
+				4CE20C3C1C5545C200F759BF /* Players.h */,
+				4CE20C3D1C5545C200F759BF /* Players.m */,
+				A80454361C54275900B59865 /* Dice.h */,
+				A80454371C54275900B59865 /* Dice.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4CE20C351C5543B800F759BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CC054731C51747D007ECB7B /* DieLabel.h */,
+				4CC054741C51747D007ECB7B /* DieLabel.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		A80452E31C5172A800B59865 = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +103,9 @@
 			children = (
 				A80452F21C5172A800B59865 /* AppDelegate.h */,
 				A80452F31C5172A800B59865 /* AppDelegate.m */,
-				A80452F51C5172A800B59865 /* ViewController.h */,
-				A80452F61C5172A800B59865 /* ViewController.m */,
-				4CC054731C51747D007ECB7B /* DieLabel.h */,
-				4CC054741C51747D007ECB7B /* DieLabel.m */,
-				A80454361C54275900B59865 /* Dice.h */,
-				A80454371C54275900B59865 /* Dice.m */,
+				4CE20C331C55436D00F759BF /* View Contollers */,
+				4CE20C351C5543B800F759BF /* Views */,
+				4CE20C341C55438D00F759BF /* Model */,
 				A80452F81C5172A800B59865 /* Main.storyboard */,
 				A80452FB1C5172A800B59865 /* Assets.xcassets */,
 				A80452FD1C5172A800B59865 /* LaunchScreen.storyboard */,
@@ -160,11 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE20C3E1C5545C200F759BF /* Players.m in Sources */,
 				A80454381C54275900B59865 /* Dice.m in Sources */,
 				A80452F71C5172A800B59865 /* ViewController.m in Sources */,
 				A80452F41C5172A800B59865 /* AppDelegate.m in Sources */,
 				A80452F11C5172A800B59865 /* main.m in Sources */,
 				4CC054751C51747D007ECB7B /* DieLabel.m in Sources */,
+				4CE20C411C55467400F759BF /* GameLogic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

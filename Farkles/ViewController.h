@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Dice.h"
+#import "DieLabel.h"
+#import "GameLogic.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate, DieLabelDelegate>
 
 @property Dice *dice;
+
+@property NSMutableArray *currentPlayingPlayers;
+
 
 @end
 

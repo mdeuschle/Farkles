@@ -7,10 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "DieLabel.h"
-#import "Dice.h"
 
-@interface ViewController () <UIGestureRecognizerDelegate, DieLabelDelegate>
+
+@interface ViewController () //<UIGestureRecognizerDelegate, DieLabelDelegate>
 
 @property (weak, nonatomic) IBOutlet DieLabel *dieOneLabel;
 @property (weak, nonatomic) IBOutlet DieLabel *dieTwoLabel;
@@ -22,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet DieLabel *playerOneScore;
 @property (strong, nonatomic) IBOutlet DieLabel *playerTwoScore;
 
-@property NSArray *diceLabelsArray;
+@property NSArray *diceLabelsArray; // original was 'allDiesArray'
 
 @end
 
