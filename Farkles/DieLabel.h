@@ -35,9 +35,6 @@
 @property NSArray *greenDiceArray;
 @property NSArray *diceArray;
 
-@property BOOL dieSelected;
-@property BOOL rollFinished;
-
 // declare property that specifies protocol
 @property (weak, nonatomic) id <DieLabelDelegate> delegate;
 

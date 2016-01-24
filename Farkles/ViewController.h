@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController
 
 @property Dice *dice;
+@property NSArray *diceArray;
 
 @end
 
