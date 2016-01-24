@@ -32,16 +32,28 @@
                                 </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MF-Qq-ULC" userLabel="Die Two Label" customClass="DieLabel">
-                                <rect key="frame" x="145" y="72" width="130" height="34"/>
+                                <rect key="frame" x="145" y="72" width="130" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="8jO-M4-uCa"/>
-                                    <constraint firstAttribute="width" constant="130" id="DO2-Vh-lZv"/>
+                                    <constraint firstAttribute="height" constant="21" id="4Bi-Gz-4jL"/>
+                                    <constraint firstAttribute="width" constant="130" id="pdd-MK-oE4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ht-pg-doP" userLabel="Die Two Label" customClass="DieLabel">
+                                <rect key="frame" x="325" y="101" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="4Sv-wB-2Ya"/>
+                                    <constraint firstAttribute="height" constant="21" id="byN-Ep-f2y"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="dDv-ZB-hVh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="net-SS-B1A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hHo-b7-doE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Opd-mO-O2P"/>
                                 </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzz-Fs-Nen" userLabel="Die Three Label" customClass="DieLabel">
@@ -144,17 +156,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Two" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEB-ro-bGy" userLabel="Die Two Label" customClass="DieLabel">
-                                <rect key="frame" x="331" y="72" width="118" height="34"/>
+                                <rect key="frame" x="331" y="72" width="118" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="118" id="Djv-6x-XWk"/>
-                                    <constraint firstAttribute="height" constant="34" id="Wf0-nU-djZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="PmK-Vb-iiR"/>
+                                    <constraint firstAttribute="width" constant="118" id="rs6-2d-oYi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="T4U-mk-7UQ"/>
-                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdU-Hp-M8z">
                                 <rect key="frame" x="180" y="414" width="240" height="44"/>
@@ -171,30 +180,49 @@
                                     <action selector="onRollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hkb-xV-8bt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04A-Bf-lrR" userLabel="Die Two Label" customClass="DieLabel">
+                                <rect key="frame" x="145" y="101" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Acg-bC-1VK"/>
+                                    <constraint firstAttribute="width" constant="130" id="P70-EC-frn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="qx2-wX-laV"/>
+                                    <constraint firstAttribute="height" constant="21" id="wrH-xl-Bfl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DfM-ko-2cD"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="is6-fB-DaL" firstAttribute="leading" secondItem="XJs-xP-ZLp" secondAttribute="trailing" constant="30" id="0he-U6-iLk"/>
+                            <constraint firstItem="0MF-Qq-ULC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1x5-eb-S89"/>
                             <constraint firstItem="YQv-CB-QPo" firstAttribute="top" secondItem="Qzz-Fs-Nen" secondAttribute="bottom" constant="30" id="24R-vB-bTA"/>
                             <constraint firstItem="soJ-8c-Tnp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ky-RQ-bf5"/>
-                            <constraint firstItem="0MF-Qq-ULC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="IRC-oo-g4k"/>
+                            <constraint firstItem="0MF-Qq-ULC" firstAttribute="centerX" secondItem="CBn-XU-Nai" secondAttribute="centerX" id="5QE-2H-4vQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3h3-Ek-CGE" secondAttribute="bottom" constant="20" id="Iyq-xf-Waw"/>
+                            <constraint firstItem="04A-Bf-lrR" firstAttribute="top" secondItem="0MF-Qq-ULC" secondAttribute="bottom" constant="8" id="Jws-KE-JgW"/>
                             <constraint firstItem="2pC-oi-5gf" firstAttribute="leading" secondItem="CBn-XU-Nai" secondAttribute="trailing" constant="30" id="OLl-2p-cxT"/>
                             <constraint firstItem="is6-fB-DaL" firstAttribute="top" secondItem="2pC-oi-5gf" secondAttribute="bottom" constant="30" id="SEf-6D-tjr"/>
+                            <constraint firstItem="tEB-ro-bGy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="UCX-oK-gBp"/>
+                            <constraint firstItem="8ht-pg-doP" firstAttribute="top" secondItem="tEB-ro-bGy" secondAttribute="bottom" constant="8" id="VBp-q0-UKn"/>
                             <constraint firstItem="2pC-oi-5gf" firstAttribute="trailing" secondItem="is6-fB-DaL" secondAttribute="trailing" id="Wbj-8W-mnD"/>
                             <constraint firstItem="is6-fB-DaL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XQe-HD-jIf"/>
                             <constraint firstItem="3h3-Ek-CGE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XWD-dA-eSt"/>
                             <constraint firstItem="RdU-Hp-M8z" firstAttribute="top" secondItem="soJ-8c-Tnp" secondAttribute="bottom" constant="10" id="aJq-oA-MO0"/>
+                            <constraint firstItem="8ht-pg-doP" firstAttribute="centerX" secondItem="Qzz-Fs-Nen" secondAttribute="centerX" id="bFf-DP-aFp"/>
                             <constraint firstItem="Qzz-Fs-Nen" firstAttribute="leading" secondItem="2pC-oi-5gf" secondAttribute="trailing" constant="30" id="dbz-E8-kVh"/>
                             <constraint firstItem="XJs-xP-ZLp" firstAttribute="centerY" secondItem="is6-fB-DaL" secondAttribute="centerY" id="eRE-OF-RHC"/>
                             <constraint firstItem="soJ-8c-Tnp" firstAttribute="top" secondItem="XJs-xP-ZLp" secondAttribute="bottom" constant="30" id="fS5-wU-YXF"/>
-                            <constraint firstItem="0MF-Qq-ULC" firstAttribute="centerX" secondItem="CBn-XU-Nai" secondAttribute="centerX" id="hBb-e2-tMh"/>
+                            <constraint firstItem="tEB-ro-bGy" firstAttribute="centerX" secondItem="Qzz-Fs-Nen" secondAttribute="centerX" id="l42-L1-fIN"/>
+                            <constraint firstItem="04A-Bf-lrR" firstAttribute="centerX" secondItem="CBn-XU-Nai" secondAttribute="centerX" id="ldo-7R-LuJ"/>
                             <constraint firstItem="YQv-CB-QPo" firstAttribute="centerY" secondItem="is6-fB-DaL" secondAttribute="centerY" id="n8F-wb-QrJ"/>
                             <constraint firstItem="YQv-CB-QPo" firstAttribute="leading" secondItem="is6-fB-DaL" secondAttribute="trailing" constant="30" id="oiz-er-mdg"/>
                             <constraint firstItem="RdU-Hp-M8z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ouG-8h-fhB"/>
                             <constraint firstItem="XJs-xP-ZLp" firstAttribute="top" secondItem="CBn-XU-Nai" secondAttribute="bottom" constant="30" id="pEt-EU-Qbi"/>
-                            <constraint firstItem="tEB-ro-bGy" firstAttribute="centerX" secondItem="Qzz-Fs-Nen" secondAttribute="centerX" id="pSC-y0-5Te"/>
-                            <constraint firstItem="tEB-ro-bGy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="u7l-43-0ax"/>
                             <constraint firstItem="is6-fB-DaL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vKG-oo-dEf"/>
                         </constraints>
                     </view>
@@ -206,8 +234,8 @@
                         <outlet property="dieSixLabel" destination="YQv-CB-QPo" id="1NX-Tb-nLd"/>
                         <outlet property="dieThreeLabel" destination="Qzz-Fs-Nen" id="BaL-Lc-YZD"/>
                         <outlet property="dieTwoLabel" destination="2pC-oi-5gf" id="ZNX-9w-Rhu"/>
-                        <outlet property="userScore" destination="0MF-Qq-ULC" id="CdI-Ar-THl"/>
-                        <outlet property="userTwoScore" destination="tEB-ro-bGy" id="UnN-Nr-yUC"/>
+                        <outlet property="playerOneScore" destination="04A-Bf-lrR" id="uxk-8B-lXH"/>
+                        <outlet property="playerTwoScore" destination="8ht-pg-doP" id="ufe-gc-9Kq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

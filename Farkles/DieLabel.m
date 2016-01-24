@@ -12,6 +12,7 @@
 @implementation DieLabel
 
 -(instancetype)initWithCoder:(NSCoder *)coder{
+
     self = [super initWithCoder:coder];
     
     if (self) {
@@ -19,7 +20,7 @@
         tapGestureRecognizer.numberOfTapsRequired = 1;
         [self addGestureRecognizer:tapGestureRecognizer];
     }
-    return  self;
+    return self;
 }
 
 -(void)dieLabelTapped
@@ -29,11 +30,7 @@
 
 -(void)roll:(id)sender
 {
-    self.blueDiceArray = [NSArray arrayWithObjects:
-                          [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue1"]],[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue2"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue3"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue4"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue5"]], [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue6"]], nil];
-
     self.randomInt = 15;
-    
     self.randomTimer = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
 }
 
@@ -41,35 +38,57 @@
 {
     self.randomInt -= 1;
 
-    self.randomDice = arc4random() % 6;
-    switch (self.randomDice)
-    {
-        case 0:
-            self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue1"]];
-            break;
-        case 1:
-            self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue2"]];
-            break;
-        case 2:
-            self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue3"]];
-            break;
-        case 3:
-            self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue4"]];
-            break;
-        case 4:
-            self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue5"]];
-            break;
-        case 5:
-            self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue6"]];
-            break;
+    int randomInt = arc4random_uniform(6) + 1;
+    self.text = [NSString stringWithFormat:@"%i", randomInt];
 
-        default:
-            break;
-    }
+    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"blue%i", randomInt]];
+    self.backgroundColor = [UIColor colorWithPatternImage:img];
 
-    if (self.randomInt == 0) {
+    self.textColor = [UIColor clearColor];
+
+    if (self.randomInt <= 0) {
         [self.randomTimer invalidate];
     }
 }
+
+-(void)holdLabel
+{
+    [self diceArrayMethod];
+
+}
+
+-(void)diceArrayMethod
+{
+    self.die1 = [[Dice alloc]initWithFullLabels:1
+                                  andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green1"]]
+                                   andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue1"]]];
+
+    self.die2 = [[Dice alloc]initWithFullLabels:2
+                                  andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green2"]]
+                                   andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue2"]]];
+
+    self.die3 = [[Dice alloc]initWithFullLabels:3
+                                  andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green3"]]
+                                   andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue3"]]];
+
+    self.die4 = [[Dice alloc]initWithFullLabels:4
+                                  andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green4"]]
+                                   andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue4"]]];
+
+    self.die5 = [[Dice alloc]initWithFullLabels:5
+                                  andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green5"]]
+                                   andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue5"]]];
+
+    self.die6 = [[Dice alloc]initWithFullLabels:6
+                                  andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green6"]]
+                                   andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue6"]]];
+
+    self.diceArray = [NSArray arrayWithObjects:self.die1, self.die2, self.die3, self.die4, self.die5, self.die6, nil];
+}
+
+
+
+
+
 
 @end

@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dice.h"
 
-@interface ViewController : UIViewController 
+@interface ViewController : UIViewController
+
+@property Dice *dice;
 
 @end
 

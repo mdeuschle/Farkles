@@ -19,11 +19,10 @@
 @property (weak, nonatomic) IBOutlet DieLabel *dieFiveLabel;
 @property (weak, nonatomic) IBOutlet DieLabel *dieSixLabel;
 
-@property (strong, nonatomic) IBOutlet DieLabel *userScore;
-@property (strong, nonatomic) IBOutlet DieLabel *userTwoScore;
+@property (strong, nonatomic) IBOutlet DieLabel *playerOneScore;
+@property (strong, nonatomic) IBOutlet DieLabel *playerTwoScore;
 
 @property NSArray *diceLabelsArray;
-@property NSArray *diceArray;
 
 @end
 
@@ -31,33 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    Dice *die1 = [[Dice alloc]initWithFullLabels:1
-                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green1"]]
-                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue1"]]];
-
-    Dice *die2 = [[Dice alloc]initWithFullLabels:1
-                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green2"]]
-                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue2"]]];
-
-    Dice *die3 = [[Dice alloc]initWithFullLabels:1
-                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green3"]]
-                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue3"]]];
-
-    Dice *die4 = [[Dice alloc]initWithFullLabels:1
-                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green4"]]
-                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue4"]]];
-
-    Dice *die5 = [[Dice alloc]initWithFullLabels:1
-                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green5"]]
-                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue5"]]];
-
-    Dice *die6 = [[Dice alloc]initWithFullLabels:1
-                                   andGreenLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"green6"]]
-                                    andBlueLabel:[UIColor colorWithPatternImage:[UIImage imageNamed:@"blue6"]]];
-
-    self.diceArray = [NSArray arrayWithObjects:die1, die2, die3, die4, die5, die6, nil];
-
 
     self.diceLabelsArray = [NSArray arrayWithObjects:
                             self.dieOneLabel,
@@ -68,18 +40,27 @@
                             self.dieSixLabel,
                             nil];
 
+    for (DieLabel *dieLabel in self.diceLabelsArray)
+    {
+        dieLabel.dieSelected = NO;
+        dieLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green6"]];
+    }
 }
 
 -(void)dieWasTapped:(DieLabel *)dieLabel
 {
-        dieLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green1"]];
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"green%@", dieLabel.text]];
+    dieLabel.backgroundColor = [UIColor colorWithPatternImage:image];
+    dieLabel.dieSelected = YES;
 }
 
 - (IBAction)onRollPressed:(UIButton *)sender
 {
     for (DieLabel *dieLabel in self.diceLabelsArray)
     {
-        [dieLabel roll:sender];
+        if (!dieLabel.dieSelected) {
+            [dieLabel roll:sender];
+        }
     }
 }
 
