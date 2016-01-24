@@ -12,9 +12,20 @@
 @interface Dice : NSObject
 
 @property int dieInt;
+
 @property UIColor *greenLabel;
 @property UIColor *blueLabel;
 
+@property NSString *dieValue;
+
+@property BOOL isBlocked;
+@property BOOL hasBeenBlocked;
+
 -(instancetype)initWithFullLabels:(int)dieInt andGreenLabel:(UIColor *)greenLabel andBlueLabel:(UIColor *)blueLabel;
+
+-(instancetype)init;
+
+-(void)rollDie;
+
 
 @end
